@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Full Stack Development Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>CSS (Cascading Style Sheets)</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html" class="active">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>What is CSS?</h2>
+
+    <p>
+        CSS stands for Cascading Style Sheets. It is a stylesheet language used
+        to control the appearance and layout of web pages. While HTML provides
+        the structure of a webpage, CSS is responsible for colours, fonts,
+        spacing, positioning and overall design.
+    </p>
+
+    <p>
+        CSS allows developers to create visually attractive websites and improve
+        the user experience. Modern websites rely heavily on CSS for responsive
+        layouts, animations and professional styling.
+    </p>
+
+    <h2>Types of CSS</h2>
+
+    <ul>
+        <li><strong>Inline CSS</strong> – Applied directly inside an HTML element.</li>
+        <li><strong>Internal CSS</strong> – Written inside a style tag within the HTML file.</li>
+        <li><strong>External CSS</strong> – Stored in a separate CSS file and linked to webpages.</li>
+    </ul>
+
+    <p>
+        This portfolio uses External CSS through the style.css file because it
+        makes styling easier to manage across multiple pages.
+    </p>
+
+    <h2>CSS Selectors</h2>
+
+    <p>
+        CSS selectors are used to target specific HTML elements. The most common
+        selectors are element selectors, class selectors and ID selectors.
+    </p>
+
+<pre>
+p {
+    color: blue;
+}
+
+.card {
+    background: white;
+}
+
+#header {
+    text-align: center;
+}
+</pre>
+
+    <h2>CSS Box Model</h2>
+
+    <p>
+        The CSS Box Model is one of the most important concepts in CSS. Every
+        element consists of content, padding, border and margin.
+    </p>
+
+    <ul>
+        <li><strong>Content</strong> – The text or image inside the element.</li>
+        <li><strong>Padding</strong> – Space between content and border.</li>
+        <li><strong>Border</strong> – Surrounds the content and padding.</li>
+        <li><strong>Margin</strong> – Space outside the border.</li>
+    </ul>
+
+    <h2>CSS Demonstration - Student Profile Card</h2>
+
+    <p>
+        The following example demonstrates how CSS can improve the appearance of
+        a webpage using colours, spacing, shadows, alignment and hover effects.
+    </p>
+
+    <div class="profile-card">
+
+        <img src="../images/PRIYANSHU PP.png"
+        alt="Profile Image">
+
+        <h3>Priyanshu Khadka</h3>
+
+        <p>
+            Full Stack Development Student
+        </p>
+
+        <button>
+            View Portfolio
+        </button>
+
+    </div>
+
+    <h2>Screenshot of My CSS Demonstration</h2>
+
+    <img src="../images/Student-profile.png"
+         alt="CSS Demonstration"
+         width="700">
+
+    <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 30px;">
+        Figure 1: Screenshot showing the final appearance of the CSS profile
+        card after styling has been applied.
+    </p>
+
+    <h2>CSS Code Snippet</h2>
+
+<pre>
+.profile-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+</pre>
+
+    <h2>Explanation of the Code</h2>
+
+    <p>
+        The profile card uses several CSS properties. The background property
+        changes the card colour, padding creates internal spacing,
+        border-radius creates rounded corners and box-shadow adds depth to the
+        design. These properties demonstrate how CSS can transform plain HTML
+        into an attractive user interface.
+    </p>
+
+    <h2>Responsive Design</h2>
+
+    <p>
+        Responsive design ensures that websites work correctly on desktops,
+        tablets and smartphones. CSS provides tools such as media queries,
+        Flexbox and Grid layouts to help developers create responsive websites.
+    </p>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        CSS is an essential technology in modern web development. Through this
+        page, I have demonstrated my understanding of CSS concepts including
+        selectors, the box model, responsive design and visual styling
+        techniques. These skills are important for creating professional and
+        user-friendly web applications.
+    </p>
+
+</div>
+
+<footer>
+    <p>© 2026 CET138 Full Stack Development Portfolio</p>
+</footer>
+
+</body>
+</html>

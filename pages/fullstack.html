@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development - CET138 Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Full Stack Development</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="fullstack.html" class="active">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>What is Full Stack Development?</h2>
+    <p>Full Stack Development refers to the practice of developing both the frontend (client-side) and backend (server-side) of a web application. A full stack developer has the skills to build a complete web application from start to finish, including the user interface, server logic and database.</p>
+    <p>The term "stack" refers to the collection of technologies used together to build a web application. A full stack developer understands how all these layers work together to deliver a functional product to the user.</p>
+
+    <h2>The Three Layers of Full Stack Development</h2>
+    <p>Every web application is made up of three main layers. Each layer has a specific role and uses different technologies:</p>
+
+    <div class="stack-diagram">
+        <div class="stack-layer layer-frontend">
+            <div class="layer-icon">🎨</div>
+            <div class="layer-info">
+                <h3>Frontend (Client-Side)</h3>
+                <p>What the user sees and interacts with in the browser</p>
+                <small>HTML · CSS · JavaScript</small>
+            </div>
+        </div>
+        <div class="stack-arrow">▼</div>
+        <div class="stack-layer layer-backend">
+            <div class="layer-icon">⚙️</div>
+            <div class="layer-info">
+                <h3>Backend (Server-Side)</h3>
+                <p>Logic that runs on the server, handles requests and processes data</p>
+                <small>Node.js · PHP · Python</small>
+            </div>
+        </div>
+        <div class="stack-arrow">▼</div>
+        <div class="stack-layer layer-database">
+            <div class="layer-icon">🗄️</div>
+            <div class="layer-info">
+                <h3>Database</h3>
+                <p>Stores and manages the application data</p>
+                <small>MySQL · PostgreSQL · MongoDB</small>
+            </div>
+        </div>
+    </div>
+
+    <h2>How the Three Layers Work Together</h2>
+    <p>Click the button below to see all three layers in action:</p>
+
+    <div class="fullstack-demo">
+        <div class="demo-layers">
+            <div class="demo-layer" id="frontendDemo">
+                <span class="demo-badge badge-html">HTML</span>
+                <p>Provides the structure</p>
+                <code>&lt;div&gt; &lt;p&gt; &lt;button&gt;</code>
+            </div>
+            <div class="demo-layer" id="cssDemo">
+                <span class="demo-badge badge-css">CSS</span>
+                <p>Provides the style</p>
+                <code>color, padding, border-radius</code>
+            </div>
+            <div class="demo-layer" id="jsDemo">
+                <span class="demo-badge badge-js">JavaScript</span>
+                <p>Provides the behaviour</p>
+                <code>addEventListener, innerHTML</code>
+            </div>
+        </div>
+        <div id="demoResult" class="demo-result">
+            Demo run #1 — HTML built this box, CSS styled it green, JavaScript updated this text and counted the clicks.
+        </div>
+        <div style="text-align: center; margin-top: 15px;">
+            <button id="runDemoBtn" class="demo-btn">Run Full Stack Demo</button>
+            <button id="resetDemoBtn" class="demo-btn-reset">Reset</button>
+        </div>
+    </div>
+
+    <h2>Screenshot of My Full Stack Demonstration</h2>
+    
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <img src="../images/demo-fsd.png" alt="Full Stack Demonstration Screenshot" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+    
+    <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 30px;">
+        Figure 1: Screenshot showing the Full Stack demonstration with three layers working together
+    </p>
+
+    <h2>Code Snippet (Full Stack Demo)</h2>
+    <pre>
+// Frontend (HTML) provides structure
+&lt;div class="demo-layer"&gt;
+    &lt;h3&gt;Frontend&lt;/h3&gt;
+    &lt;p&gt;HTML, CSS, JavaScript&lt;/p&gt;
+&lt;/div&gt;
+
+// Backend simulation with JavaScript
+function runDemo() {
+    let count = localStorage.getItem('demoCount') || 0;
+    count++;
+    document.getElementById('demoResult').innerHTML = 
+        "Demo run #" + count + " — Full stack application executed!";
+}
+    </pre>
+
+    <h2>Explanation of the Code</h2>
+    <p>The demonstration above shows how the three layers of full stack development work together:</p>
+    <ul>
+        <li><strong>HTML</strong> provides the structure with divs, paragraphs and buttons.</li>
+        <li><strong>CSS</strong> styles the boxes with colors, padding and border-radius.</li>
+        <li><strong>JavaScript</strong> adds behaviour by listening to clicks and updating content.</li>
+    </ul>
+
+    <h2>Advantages of Full Stack Development</h2>
+    <ul>
+        <li>Complete understanding of how web applications work</li>
+        <li>Ability to build projects independently from start to finish</li>
+        <li>Better problem-solving across entire application</li>
+        <li>Higher employability in the job market</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Full Stack Development combines frontend and backend skills to build complete web applications. Understanding how HTML, CSS, JavaScript work together on the frontend, along with backend technologies and databases, provides a comprehensive foundation for modern web development.</p>
+
+</div>
+
+<footer>
+    <p>© 2026 CET138 Full Stack Development Portfolio</p>
+</footer>
+
+<script>
+    let demoCount = 1;
+    
+    function runFullStackDemo() {
+        let resultDiv = document.getElementById('demoResult');
+        resultDiv.innerHTML = "Demo run #" + demoCount + " — HTML built this box, CSS styled it green, JavaScript updated this text and counted the clicks.";
+        resultDiv.style.background = "#e6f7e6";
+        resultDiv.style.borderLeftColor = "#28a745";
+        demoCount++;
+    }
+    
+    function resetDemo() {
+        let resultDiv = document.getElementById('demoResult');
+        resultDiv.innerHTML = "Demo run #1 — HTML built this box, CSS styled it green, JavaScript updated this text and counted the clicks.";
+        resultDiv.style.background = "#f7fafc";
+        resultDiv.style.borderLeftColor = "#cbd5e0";
+        demoCount = 1;
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        let runBtn = document.getElementById('runDemoBtn');
+        let resetBtn = document.getElementById('resetDemoBtn');
+        
+        if(runBtn) runBtn.onclick = runFullStackDemo;
+        if(resetBtn) resetBtn.onclick = resetDemo;
+    });
+</script>
+
+</body>
+</html>

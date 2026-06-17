@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Full Stack Development Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>JavaScript (JS)</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html" class="active">JavaScript</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>What is JavaScript?</h2>
+    <p>JavaScript is a programming language that makes websites interactive. While HTML gives you the structure and CSS handles the styling, JavaScript lets you respond to user actions like clicks, typing, or form submissions. It runs directly in your browser without needing to reload the page.</p>
+    <p>Almost every modern website uses JavaScript for things like form validation, dropdown menus, image sliders, popups, and loading new content without refreshing. It is one of the three core technologies of the web, right alongside HTML and CSS.</p>
+
+    <h2>Key Features of JavaScript</h2>
+    <ul>
+        <li>Client-side scripting (runs in the browser)</li>
+        <li>Event-driven programming</li>
+        <li>DOM manipulation (changing HTML/CSS on the fly)</li>
+        <li>Form validation before submitting</li>
+        <li>Asynchronous operations (fetching data)</li>
+        <li>Large ecosystem of libraries and frameworks</li>
+    </ul>
+
+    <h2>How JavaScript Works</h2>
+    <p>When you load a webpage, the browser reads the HTML and builds a structure called the DOM (Document Object Model). JavaScript can then access that DOM and modify it. For example, when you click a button, JavaScript can show a hidden message, change colors, validate an email field, or fetch data from a server — all without reloading the page.</p>
+
+    <h2>HTML vs CSS vs JavaScript</h2>
+    <table>
+        <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+            <th>Analogy</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Structure / content</td>
+            <td>The skeleton / frame</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Styling / layout</td>
+            <td>The paint / decorations</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Interactivity / behavior</td>
+            <td>The brain / moving parts</td>
+        </tr>
+    </table>
+
+    <h2>Common Uses of JavaScript</h2>
+    <ul>
+        <li>Validating form data before sending to server</li>
+        <li>Creating interactive maps and charts</li>
+        <li>Building shopping carts and checkout flows</li>
+        <li>Loading new content without page refresh (AJAX)</li>
+        <li>Animations, image sliders, modal popups</li>
+        <li>Game development in the browser</li>
+    </ul>
+
+    <h2>Live Demonstration – Form Validation with JavaScript</h2>
+    <p>Below is a working example. Enter your details and click Register. JavaScript will check if the fields are filled correctly and show you a message. This is exactly how real websites validate forms before sending data to a server.</p>
+
+    <div class="demo-box">
+        <h3>Student Registration Validation</h3>
+
+        <div class="form-row">
+            <label>Full name :</label>
+            <input type="text" id="demoName">
+        </div>
+
+        <div class="form-row">
+            <label>Email address :</label>
+            <input type="email" id="demoEmail">
+        </div>
+
+        <div class="form-row">
+            <label>Password :</label>
+            <input type="password" id="demoPassword">
+        </div>
+
+        <div class="form-row">
+            <label>Confirm password :</label>
+            <input type="password" id="demoConfirmPwd">
+        </div>
+
+        <div class="button-group">
+            <button type="button" id="validateBtn" class="btn-register">Register</button>
+            <button type="button" id="resetFormBtn" class="btn-reset">Reset</button>
+        </div>
+
+        <div id="demoResult" class="result-area">
+            Fill out the fields and click Register.
+        </div>
+    </div>
+
+    <h2>Screenshot of My Working Form</h2>
+
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <img src="../images/js-demo.png"
+             alt="JavaScript form validation screenshot"
+             style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 30px;">
+        Figure 1: Screenshot of the JavaScript validation demo showing error messages and success confirmation.
+    </p>
+
+    <h2>Code Snippet (JavaScript Validation)</h2>
+    <pre>
+function validateAndShow() {
+    let name = document.getElementById('demoName').value;
+    let email = document.getElementById('demoEmail').value;
+    let password = document.getElementById('demoPassword').value;
+    let confirmPwd = document.getElementById('demoConfirmPwd').value;
+    let resultDiv = document.getElementById('demoResult');
+    let errors = [];
+
+    if(name === "" || name === null) {
+        errors.push("Name is required");
+    } else if(name.trim().length < 2) {
+        errors.push("Name must be at least 2 characters");
+    }
+
+    if(email === "" || email === null) {
+        errors.push("Email is required");
+    } else if(!email.includes("@") || !email.includes(".")) {
+        errors.push("Enter a valid email address");
+    }
+
+    if(password === "") {
+        errors.push("Password is required");
+    } else if(password.length < 6) {
+        errors.push("Password must be at least 6 characters");
+    }
+
+    if(password !== confirmPwd) {
+        errors.push("Passwords do not match");
+    }
+
+    if(errors.length > 0) {
+        resultDiv.innerHTML = "ERROR: " + errors.join(" · ");
+        resultDiv.style.background = "#fee";
+        resultDiv.style.borderLeftColor = "#dc3545";
+    } else {
+        resultDiv.innerHTML = "Registration successful! Welcome " + name.trim();
+        resultDiv.style.background = "#e6f7e6";
+        resultDiv.style.borderLeftColor = "#28a745";
+    }
+}
+    </pre>
+
+    <h2>Explanation of the Code</h2>
+    <p>The JavaScript code above shows a real-world validation function. It:</p>
+    <ul>
+        <li>Gets values from the input fields using <strong>document.getElementById()</strong></li>
+        <li>Checks if the name is empty or too short (less than 2 characters)</li>
+        <li>Validates email format by checking for "@" and "." characters</li>
+        <li>Ensures password is at least 6 characters long</li>
+        <li>Compares password and confirm password fields</li>
+        <li>Collects all error messages into an array and displays them together</li>
+        <li>Shows a success message with the user's name if everything passes</li>
+    </ul>
+    <p>This is typical of how client-side validation works on thousands of real websites — catching mistakes early before data is sent to a server.</p>
+
+    <h2>Additional Example – Simple DOM Manipulation</h2>
+    <p>JavaScript can also change content and styles on the page. Click the button below to see it in action:</p>
+
+    <div class="dom-demo">
+        <p id="messageBox">This text will change when you click the button.</p>
+        <button id="changeTextBtn" class="btn-change">Click me!</button>
+        <button id="resetTextBtn" class="btn-reset-msg">Reset</button>
+    </div>
+
+    <h2>Advantages and Disadvantages</h2>
+    <table>
+        <tr>
+            <th>Advantages</th>
+            <th>Disadvantages</th>
+        </tr>
+        <tr>
+            <td>Easy to learn for beginners</td>
+            <td>Can be disabled in some browsers</td>
+        </tr>
+        <tr>
+            <td>Fast execution on the client side</td>
+            <td>Different browsers may behave differently</td>
+        </tr>
+        <tr>
+            <td>Huge community and many resources</td>
+            <td>Security risks (XSS) if not careful</td>
+        </tr>
+        <tr>
+            <td>Works with HTML and CSS seamlessly</td>
+            <td>Large projects can become messy without structure</td>
+        </tr>
+    </table>
+
+    <h2>Conclusion</h2>
+    <p>JavaScript is essential for modern web development. It brings web pages to life by adding interaction, validation, and dynamic updates. The demonstration above shows a real working example of form validation, similar to what you would build for a real website. Understanding HTML, CSS, and JavaScript together gives you the complete foundation for front-end development and is the first step toward becoming a full stack developer.</p>
+
+</div>
+
+<footer>
+    <p>© 2026 CET138 Full Stack Development Portfolio</p>
+</footer>
+
+<script>
+    function validateAndShow() {
+        let name = document.getElementById('demoName').value;
+        let email = document.getElementById('demoEmail').value;
+        let password = document.getElementById('demoPassword').value;
+        let confirmPwd = document.getElementById('demoConfirmPwd').value;
+        let resultDiv = document.getElementById('demoResult');
+        let errors = [];
+
+        if(name === "" || name === null) {
+            errors.push("Name is required");
+        } else if(name.trim().length < 2) {
+            errors.push("Name must be at least 2 characters");
+        } else if(name.trim().length > 50) {
+            errors.push("Name is too long (max 50 characters)");
+        }
+
+        if(email === "" || email === null) {
+            errors.push("Email is required");
+        } else if(!email.includes("@") || !email.includes(".")) {
+            errors.push("Enter a valid email address (e.g., name@domain.com)");
+        }
+
+        if(password === "") {
+            errors.push("Password is required");
+        } else if(password.length < 6) {
+            errors.push("Password must be at least 6 characters");
+        } else if(password.length > 20) {
+            errors.push("Password is too long (max 20 characters)");
+        }
+
+        if(confirmPwd === "") {
+            errors.push("Please confirm your password");
+        } else if(password !== confirmPwd) {
+            errors.push("Passwords do not match");
+        }
+
+        if(errors.length > 0) {
+            resultDiv.innerHTML = "ERROR: " + errors.join(" · ");
+            resultDiv.style.background = "#fee";
+            resultDiv.style.borderLeftColor = "#dc3545";
+            resultDiv.style.color = "#721c24";
+        } else {
+            resultDiv.innerHTML = "Registration successful! Welcome " + name.trim() + ". A confirmation email has been sent to " + email + ".";
+            resultDiv.style.background = "#e6f7e6";
+            resultDiv.style.borderLeftColor = "#28a745";
+            resultDiv.style.color = "#155724";
+        }
+    }
+
+    function resetForm() {
+        document.getElementById('demoName').value = '';
+        document.getElementById('demoEmail').value = '';
+        document.getElementById('demoPassword').value = '';
+        document.getElementById('demoConfirmPwd').value = '';
+
+        let resultDiv = document.getElementById('demoResult');
+        resultDiv.innerHTML = "Form has been reset. Fill out the fields and click Register.";
+        resultDiv.style.background = "#f9f9f9";
+        resultDiv.style.borderLeftColor = "#ccc";
+        resultDiv.style.color = "#222";
+
+        document.getElementById('demoName').focus();
+    }
+
+    function changeMessage() {
+        let msgBox = document.getElementById('messageBox');
+        if(msgBox.innerHTML === "This text will change when you click the button.") {
+            msgBox.innerHTML = "You just changed this text using JavaScript. The DOM was updated dynamically without reloading the page.";
+            msgBox.style.backgroundColor = "#f7df1e";
+            msgBox.style.padding = "10px";
+            msgBox.style.borderRadius = "4px";
+            msgBox.style.fontWeight = "bold";
+        } else {
+            msgBox.innerHTML = "This text will change when you click the button.";
+            msgBox.style.backgroundColor = "transparent";
+            msgBox.style.padding = "0";
+            msgBox.style.fontWeight = "normal";
+        }
+    }
+
+    function resetMessage() {
+        let msgBox = document.getElementById('messageBox');
+        msgBox.innerHTML = "This text will change when you click the button.";
+        msgBox.style.backgroundColor = "transparent";
+        msgBox.style.padding = "0";
+        msgBox.style.fontWeight = "normal";
+        msgBox.style.borderRadius = "0";
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let validateButton = document.getElementById('validateBtn');
+        let resetButton = document.getElementById('resetFormBtn');
+        let changeBtn = document.getElementById('changeTextBtn');
+        let resetMsgBtn = document.getElementById('resetTextBtn');
+
+        if(validateButton) {
+            validateButton.onclick = validateAndShow;
+            console.log("Validate button connected");
+        }
+
+        if(resetButton) {
+            resetButton.onclick = resetForm;
+            console.log("Reset button connected");
+        }
+
+        if(changeBtn) {
+            changeBtn.onclick = changeMessage;
+            console.log("Change button connected");
+        }
+
+        if(resetMsgBtn) {
+            resetMsgBtn.onclick = resetMessage;
+            console.log("Reset message button connected");
+        }
+
+        console.log("JavaScript loaded successfully - Form validation ready!");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML - Full Stack Development Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>HTML (HyperText Markup Language)</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html" class="active">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>What is HTML?</h2>
+
+    <p>
+        HTML stands for HyperText Markup Language. It is the standard markup
+        language which is used to create web pages and applications. HTML provides the
+        structure of a webpage by using different elements such as headings,
+        paragraphs, images, links, tables, lists and forms.
+    </p>
+
+    <p>
+        Every website on the internet uses HTML as its foundation. While HTML
+        creates the structure of a webpage, CSS is used for styling and
+        JavaScript is used to add interactivity and dynamic behaviour.
+    </p>
+
+    <h2>Key HTML Elements</h2>
+
+    <ul>
+        <li>Headings (&lt;h1&gt; to &lt;h6&gt;)</li>
+        <li>Paragraphs (&lt;p&gt;)</li>
+        <li>Links (&lt;a&gt;)</li>
+        <li>Images (&lt;img&gt;)</li>
+        <li>Lists (&lt;ul&gt; and &lt;ol&gt;)</li>
+        <li>Tables (&lt;table&gt;)</li>
+        <li>Forms (&lt;form&gt;)</li>
+    </ul>
+
+    <h2>HTML Form Demonstration</h2>
+
+    <p>
+        The following example demonstrates a student registration form created
+        using HTML form elements. It collects user information through text
+        boxes, radio buttons, checkboxes, dropdown menus and file upload
+        controls.
+    </p>
+
+    <!-- FORM WRAPPER -->
+    <div style="
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 20px 24px 28px;
+        max-width: 700px;
+        font-family: 'Times New Roman', Times, serif;
+    ">
+        <h3 style="font-size:20px; font-weight:700; color:#111; border-bottom:1px solid #ddd; padding-bottom:8px; margin-bottom:16px;">
+            Student Registration Form
+        </h3>
+
+        <form>
+
+            <!-- Roll No -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Roll no. :</label>
+                <input type="text" style="flex:1; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif;">
+            </div>
+
+            <!-- Student Name -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Student name :</label>
+                <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
+                    <input type="text" placeholder="First Name" style="width:100%; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif;">
+                    <input type="text" placeholder="Last Name" style="width:100%; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif;">
+                </div>
+            </div>
+
+            <!-- Father's Name -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Father's name :</label>
+                <input type="text" style="flex:1; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif;">
+            </div>
+
+            <!-- Date of Birth -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Date of birth :</label>
+                <div style="display:flex; flex-direction:column; gap:3px;">
+                    <div style="display:flex; align-items:center; gap:4px;">
+                        <input type="text" placeholder="Day"   style="width:55px; padding:4px 6px; font-size:13px; border:1px solid #ccc; border-radius:3px; text-align:center; font-family:'Times New Roman',Times,serif;">
+                        <span style="font-size:13px;">-</span>
+                        <input type="text" placeholder="Month" style="width:65px; padding:4px 6px; font-size:13px; border:1px solid #ccc; border-radius:3px; text-align:center; font-family:'Times New Roman',Times,serif;">
+                        <span style="font-size:13px;">-</span>
+                        <input type="text" placeholder="Year"  style="width:65px; padding:4px 6px; font-size:13px; border:1px solid #ccc; border-radius:3px; text-align:center; font-family:'Times New Roman',Times,serif;">
+                    </div>
+                    <small style="font-size:11px; color:#555;">(DD-MM-YYYY)</small>
+                </div>
+            </div>
+
+            <!-- Mobile No -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Mobile no. :</label>
+                <div style="display:flex;">
+                    <select name="country_code" style="padding:4px 4px; background:#f5f5f5; border:1px solid #ccc; border-right:none; border-radius:3px 0 0 3px; font-size:13px; font-family:'Times New Roman',Times,serif; color:#333; cursor:pointer;">
+                        <option value="+977">🇳🇵 +977</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+86">🇨🇳 +86</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+971">🇦🇪 +971</option>
+                        <option value="+92">🇵🇰 +92</option>
+                        <option value="+880">🇧🇩 +880</option>
+                        <option value="+94">🇱🇰 +94</option>
+                        <option value="+65">🇸🇬 +65</option>
+                        <option value="+60">🇲🇾 +60</option>
+                    </select>
+                    <input type="tel" placeholder="Phone number" style="flex:1; width:220px; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:0 3px 3px 0; font-family:'Times New Roman',Times,serif;">
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Email id :</label>
+                <input type="email" style="flex:1; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif;">
+            </div>
+
+            <!-- Password -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Password :</label>
+                <input type="password" style="flex:1; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif;">
+            </div>
+
+            <!-- Gender -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Gender :</label>
+                <div style="display:flex; gap:14px; padding-top:4px;">
+                    <label style="font-size:13px; display:flex; align-items:center; gap:5px; cursor:pointer;">
+                        <input type="radio" name="gender" value="male"> Male
+                    </label>
+                    <label style="font-size:13px; display:flex; align-items:center; gap:5px; cursor:pointer;">
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                </div>
+            </div>
+
+            <!-- Department -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Department :</label>
+                <div style="display:flex; gap:12px; flex-wrap:wrap; padding-top:4px;">
+                    <label style="font-size:13px; display:flex; align-items:center; gap:4px; cursor:pointer;"><input type="checkbox" name="dept" value="CSE"> CSE</label>
+                    <label style="font-size:13px; display:flex; align-items:center; gap:4px; cursor:pointer;"><input type="checkbox" name="dept" value="IT"> IT</label>
+                    <label style="font-size:13px; display:flex; align-items:center; gap:4px; cursor:pointer;"><input type="checkbox" name="dept" value="ECE"> ECE</label>
+                    <label style="font-size:13px; display:flex; align-items:center; gap:4px; cursor:pointer;"><input type="checkbox" name="dept" value="Civil"> Civil</label>
+                    <label style="font-size:13px; display:flex; align-items:center; gap:4px; cursor:pointer;"><input type="checkbox" name="dept" value="Mech"> Mech</label>
+                </div>
+            </div>
+
+            <!-- Course -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Course :</label>
+                <select style="flex:1; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif; color:#555;">
+                    <option value="">--- Select Current Course's ---</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="mtech">M.Tech</option>
+                    <option value="bca">BCA</option>
+                    <option value="mca">MCA</option>
+                    <option value="bsc">B.Sc</option>
+                </select>
+            </div>
+
+            <!-- Student Photo -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Student photo :</label>
+                <input type="file" accept="image/*" style="font-size:13px; font-family:'Times New Roman',Times,serif;">
+            </div>
+
+            <!-- City -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:12px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">City :</label>
+                <input type="text" style="flex:1; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif;">
+            </div>
+
+            <!-- Address -->
+            <div style="display:flex; align-items:flex-start; margin-bottom:16px; gap:10px;">
+                <label style="min-width:130px; font-size:14px; color:#222; padding-top:5px; flex-shrink:0;">Address :</label>
+                <textarea rows="3" style="flex:1; padding:4px 8px; font-size:13px; border:1px solid #ccc; border-radius:3px; font-family:'Times New Roman',Times,serif; resize:vertical;"></textarea>
+            </div>
+
+            <!-- Register Button -->
+            <div style="padding-left:140px;">
+                <button type="submit" style="padding:7px 22px; background:#1a73e8; color:#fff; border:none; border-radius:4px; font-size:14px; font-family:'Times New Roman',Times,serif; font-weight:600; cursor:pointer;">
+                    Register
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <h2>Screenshot of My Working Form</h2>
+
+    <!-- Left aligned screenshot -->
+    <div style="margin: 20px 0;">
+        <img src="../images/reg.png"
+             alt="HTML Form Example"
+             style="max-width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+    </div>
+
+    <p style="font-style: italic; color: #666; margin-bottom: 30px;">
+        Figure 1: Screenshot of the completed HTML registration form.
+    </p>
+
+    <h2>Code Snippet</h2>
+
+<pre>
+&lt;label&gt;Roll no. :&lt;/label&gt;
+&lt;input type="text"&gt;
+
+&lt;label&gt;Student name :&lt;/label&gt;
+&lt;input type="text" placeholder="First Name"&gt;
+&lt;input type="text" placeholder="Last Name"&gt;
+
+&lt;label&gt;Father's name :&lt;/label&gt;
+&lt;input type="text"&gt;
+
+&lt;label&gt;Date of birth :&lt;/label&gt;
+&lt;input type="text" placeholder="Day"&gt; -
+&lt;input type="text" placeholder="Month"&gt; -
+&lt;input type="text" placeholder="Year"&gt;
+
+&lt;label&gt;Mobile no. :&lt;/label&gt;
+&lt;select name="country_code"&gt;
+    &lt;option value="+977"&gt;+977 (Nepal)&lt;/option&gt;
+    &lt;option value="+91"&gt;+91 (India)&lt;/option&gt;
+&lt;/select&gt;
+&lt;input type="tel" placeholder="Phone number"&gt;
+
+&lt;label&gt;Email id :&lt;/label&gt;
+&lt;input type="email"&gt;
+
+&lt;label&gt;Password :&lt;/label&gt;
+&lt;input type="password"&gt;
+
+&lt;label&gt;Gender :&lt;/label&gt;
+&lt;input type="radio" name="gender"&gt; Male
+&lt;input type="radio" name="gender"&gt; Female
+
+&lt;label&gt;Department :&lt;/label&gt;
+&lt;input type="checkbox" name="dept" value="CSE"&gt; CSE
+&lt;input type="checkbox" name="dept" value="IT"&gt; IT
+&lt;input type="checkbox" name="dept" value="ECE"&gt; ECE
+&lt;input type="checkbox" name="dept" value="Civil"&gt; Civil
+&lt;input type="checkbox" name="dept" value="Mech"&gt; Mech
+
+&lt;label&gt;Course :&lt;/label&gt;
+&lt;select&gt;
+    &lt;option&gt;--- Select Current Course's ---&lt;/option&gt;
+    &lt;option&gt;B.Tech&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;label&gt;Student photo :&lt;/label&gt;
+&lt;input type="file" accept="image/*"&gt;
+
+&lt;label&gt;City :&lt;/label&gt;
+&lt;input type="text"&gt;
+
+&lt;label&gt;Address :&lt;/label&gt;
+&lt;textarea rows="3"&gt;&lt;/textarea&gt;
+
+&lt;button type="submit"&gt;Register&lt;/button&gt;
+</pre>
+
+    <h2>Explanation of the Code</h2>
+
+    <p>
+        The form uses several important HTML elements. The
+        <strong>label</strong> element identifies the purpose of each field.
+        The <strong>input</strong> element is used to collect text, email,
+        radio button, checkbox, tel and file upload data. The
+        <strong>select</strong> element creates a dropdown menu for both
+        country code and course selection. The <strong>textarea</strong>
+        element allows multi-line text input for the address field, while the
+        <strong>button</strong> element submits the form.
+    </p>
+
+    <h2>Additional HTML Example - Table</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Structure of Web Pages</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Styling and Layout</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Interactivity and Functionality</td>
+        </tr>
+    </table>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        HTML is the foundation of web development and provides the structure
+        required for creating modern websites. Through this demonstration, I
+        have shown my understanding of HTML elements including forms, tables,
+        lists and page structure. The student registration form demonstrates
+        the use of text inputs, radio buttons, checkboxes, dropdown menus,
+        file uploads and textareas. These skills form an essential part of
+        full stack development.
+    </p>
+
+</div>
+
+<footer>
+    <p>© 2026 CET138 Full Stack Development Portfolio</p>
+</footer>
+
+</body>
+</html>

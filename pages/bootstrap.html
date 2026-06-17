@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Full Stack Development Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+    header {
+        padding: 45px 20px !important;
+        min-height: 150px !important;
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Bootstrap Framework</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html" class="active">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>What is Bootstrap?</h2>
+
+    <p>
+        Bootstrap is a free and open-source CSS framework used to build
+        responsive and mobile-first websites. It was originally developed
+        by Twitter and is now one of the most popular frontend frameworks
+        in the world. Bootstrap provides ready-made components such as
+        buttons, cards, progress bars, badges and grids that developers
+        can use to build professional websites quickly.
+    </p>
+
+    <p>
+        Instead of writing all CSS from scratch, Bootstrap allows developers
+        to use pre-built classes directly in their HTML. This saves time and
+        ensures consistent styling across all browsers and screen sizes.
+    </p>
+
+    <h2>Key Bootstrap Features</h2>
+
+    <ul>
+        <li><strong>Grid System</strong> – Splits the page into 12 columns for responsive layouts.</li>
+        <li><strong>Components</strong> – Ready-made cards, buttons, alerts, badges and progress bars.</li>
+        <li><strong>Mobile-First</strong> – Designed to work on small screens first and scale up.</li>
+        <li><strong>Utility Classes</strong> – Short classes like mt-3 and text-center for quick styling.</li>
+        <li><strong>No installation needed</strong> – Just add a CDN link to the HTML head.</li>
+    </ul>
+
+    <h2>How to Include Bootstrap</h2>
+
+    <p>
+        Bootstrap can be added to any HTML page by including this CDN link
+        inside the head section of the document. No downloading or
+        installation is needed:
+    </p>
+
+<pre>
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"&gt;
+</pre>
+
+    <h2>The Bootstrap Grid System</h2>
+
+    <p>
+        The Bootstrap grid divides the page into 12 columns. Columns can
+        be combined to create different layouts. For example col-md-6
+        creates two equal columns and col-md-4 creates three equal columns:
+    </p>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Class</th>
+            <th>What it does</th>
+        </tr>
+        <tr>
+            <td>container</td>
+            <td>Centres the content and adds padding on the sides</td>
+        </tr>
+        <tr>
+            <td>row</td>
+            <td>Creates a horizontal row for columns to sit inside</td>
+        </tr>
+        <tr>
+            <td>col-md-4</td>
+            <td>Takes up 4 out of 12 columns on medium screens</td>
+        </tr>
+        <tr>
+            <td>col-md-6</td>
+            <td>Takes up 6 out of 12 columns, creates two equal halves</td>
+        </tr>
+        <tr>
+            <td>col-12</td>
+            <td>Takes up the full width of the row on all screen sizes</td>
+        </tr>
+    </table>
+
+    <h2>Bootstrap Demonstration - Student Profile Card</h2>
+
+    <p>
+        The example below demonstrates Bootstrap components working together.
+        A student profile card has been created using the grid system, card
+        component, badges, progress bars, buttons and alert boxes. The whole
+        demonstration uses Bootstrap classes only, no extra CSS was written:
+    </p>
+
+    <div class="bootstrap-demo-wrap">
+        <div class="row mt-3 mb-3">
+
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body text-center p-4">
+                        <h4 class="card-title">Priyanshu Khadka</h4>
+                        <p class="card-text text-muted">Full Stack Development Student</p>
+                        <span class="badge bg-primary me-1">HTML</span>
+                        <span class="badge bg-success me-1">CSS</span>
+                        <span class="badge bg-warning text-dark me-1">JavaScript</span>
+                        <span class="badge bg-danger">Bootstrap</span>
+                        <hr>
+                        <p class="text-start mb-1"><small>HTML</small></p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-danger" style="width:90%">90%</div>
+                        </div>
+                        <p class="text-start mb-1"><small>CSS</small></p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-primary" style="width:85%">85%</div>
+                        </div>
+                        <p class="text-start mb-1"><small>JavaScript</small></p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-warning" style="width:75%">75%</div>
+                        </div>
+                        <p class="text-start mb-1"><small>Bootstrap</small></p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" style="width:80%">80%</div>
+                        </div>
+                        <button class="btn btn-primary me-2">View Portfolio</button>
+                        <button class="btn btn-outline-secondary">Contact</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">About</h5>
+                        <p class="card-text">Full Stack Development student studying HTML, CSS, JavaScript and Bootstrap to build modern web applications.</p>
+                        <span class="badge bg-info text-dark">CET138</span>
+                        <span class="badge bg-secondary ms-1">2026</span>
+                    </div>
+                </div>
+                <div class="alert alert-success" role="alert">
+                    Currently enrolled in Full Stack Development
+                </div>
+                <div class="alert alert-info" role="alert">
+                    Portfolio built using HTML, CSS and Bootstrap
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h2>Screenshot of My Bootstrap Demonstration</h2>
+
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <img src="../images/boot.png"
+             alt="Bootstrap Demonstration"
+             style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+        <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 30px;">
+            Figure 1: Screenshot showing the Bootstrap student profile card with badges, progress bars, buttons and alerts working in the browser.
+        </p>
+
+    <h2>Bootstrap Code Snippet</h2>
+
+<pre>
+&lt;div class="card shadow"&gt;
+    &lt;div class="card-body text-center p-4"&gt;
+        &lt;h4 class="card-title"&gt;Priyanshu Khadka&lt;/h4&gt;
+        &lt;p class="card-text text-muted"&gt;Full Stack Student&lt;/p&gt;
+
+        &lt;span class="badge bg-primary"&gt;HTML&lt;/span&gt;
+        &lt;span class="badge bg-success"&gt;CSS&lt;/span&gt;
+
+        &lt;div class="progress mb-2"&gt;
+            &lt;div class="progress-bar bg-danger" style="width:90%"&gt;
+                90%
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;button class="btn btn-primary"&gt;View Portfolio&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success"&gt;
+    Currently enrolled in Full Stack Development
+&lt;/div&gt;
+</pre>
+
+    <h2>Explanation of the Code</h2>
+
+    <p>
+        The card and card-body classes create the white box with padding.
+        The shadow class adds a drop shadow to make the card stand out on
+        the page. The text-center class centres all the content inside and
+        p-4 adds extra padding around everything. The badge class with
+        colours like bg-primary and bg-danger creates the small skill labels.
+        For the progress bars the progress class is used on the outer div
+        and progress-bar on the inner div. The width is set using an inline
+        style to control how full each bar appears. The btn class with
+        btn-primary styles the blue button and btn-outline-secondary creates
+        the outlined button. The alert class with alert-success makes the
+        green box and alert-info makes the blue one.
+    </p>
+
+    <h2>Bootstrap vs Custom CSS</h2>
+
+    <p>
+        Both Bootstrap and custom CSS can be used to style a webpage but
+        they each have different advantages and disadvantages:
+    </p>
+
+    <table border="1" cellpadding="10">
+        <table>
+            <th>Feature</th>
+            <th>Bootstrap</th>
+            <th>Custom CSS</th>
+        </tr>
+        <tr>
+            <td>Speed</td>
+            <td>Quick, classes are ready to use</td>
+            <td>Takes longer to write everything</td>
+        </tr>
+        <tr>
+            <td>Responsive layout</td>
+            <td>Built in automatically</td>
+            <td>Have to write media queries manually</td>
+        </tr>
+        <tr>
+            <td>Browser support</td>
+            <td>Works the same in all browsers</td>
+            <td>Sometimes looks different in each browser</td>
+        </tr>
+        <tr>
+            <td>Customisation</td>
+            <td>Can be limited by the framework</td>
+            <td>Full control over every style</td>
+        </tr>
+        <tr>
+            <td>File size</td>
+            <td>Larger due to the full framework</td>
+            <td>Smaller, only what is needed</td>
+        </tr>
+    </table>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        Bootstrap is a powerful and widely used CSS framework that makes
+        building responsive and professional websites much faster. Through
+        this demonstration, an understanding of the Bootstrap grid system,
+        card components, badges, progress bars, buttons and alerts has been
+        shown. Using Bootstrap alongside a custom CSS file allows developers
+        to build consistent and attractive web pages without writing
+        everything from scratch. These skills are an important part of
+        modern full stack development.
+    </p>
+
+</div>
+
+<footer>
+    <p>© 2026 CET138 Full Stack Development Portfolio</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

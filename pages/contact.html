@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Full Stack Development Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Contact Me</h1>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+    <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>Get In Touch</h2>
+
+    <p>
+        Thank you for visiting my Full Stack Development Portfolio.
+        If you would like to discuss my projects, academic work,
+        internship opportunities, or provide feedback, please use
+        the contact form below.
+    </p>
+
+    <div class="contact-card">
+
+        <h3>Contact Information</h3>
+
+        <p><strong>Name:</strong> Prashamsha Khadka</p>
+        <p><strong>Email:</strong> prashamshakhadka0@gmail.com</p>
+        <p><strong>Location:</strong> Bharatpur, Nepal</p>
+
+    </div>
+
+    <h2>Contact Form</h2>
+
+    <form class="contact-form">
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Enter subject">
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="6" placeholder="Enter your message"></textarea>
+
+        <button type="button" onclick="sendMessage()">Send Message</button>
+
+    </form>
+
+    <p id="contactResult" style="margin-top:15px; font-size:14px; font-weight:600;"></p>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 CET138 Full Stack Development Portfolio</p>
+</footer>
+
+<script>
+function sendMessage() {
+
+    let fullname = document.getElementById("fullname").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    let result = document.getElementById("contactResult");
+
+    if(fullname === "" || email === "" || subject === "" || message === "") {
+        result.innerHTML = "Please fill in all fields.";
+        result.style.color = "red";
+        result.style.background = "#fff3f3";
+        result.style.padding = "10px";
+        result.style.borderRadius = "4px";
+        result.style.border = "1px solid #ffcccc";
+        return;
+    }
+
+    if(!email.includes("@") || !email.includes(".")) {
+        result.innerHTML = "Please enter a valid email address.";
+        result.style.color = "red";
+        result.style.background = "#fff3f3";
+        result.style.padding = "10px";
+        result.style.borderRadius = "4px";
+        result.style.border = "1px solid #ffcccc";
+        return;
+    }
+
+    result.innerHTML = "Thank you, " + fullname + "! Your message has been sent successfully.";
+    result.style.color = "green";
+    result.style.background = "#f0fff0";
+    result.style.padding = "10px";
+    result.style.borderRadius = "4px";
+    result.style.border = "1px solid #ccffcc";
+
+    document.getElementById("fullname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("message").value = "";
+}
+</script>
+
+</body>
+</html>
